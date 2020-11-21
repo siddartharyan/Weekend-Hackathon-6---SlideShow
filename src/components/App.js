@@ -24,22 +24,26 @@ const App = ({ slides }) => {
     <>
       <h1 data-testid="title">{slides[index].title}</h1>
       <p data-testid="text">{slides[index].title}</p>
-      <button onClick={restart} data-testid="button-restart">
-        restart
+      <button
+        onClick={restart}
+        data-testid="button-restart"
+        disabled={index === 0 ? true : false}
+      >
+        Restart
       </button>
       <button
         data-testid="button-prev"
         onClick={prevClick}
         disabled={index === 0 ? true : false}
       >
-        prev
+        Prev
       </button>
       <button
         data-testid="button-next"
         onClick={nextClick}
         disabled={index === slides.length - 1 ? true : false}
       >
-        next
+        Next
       </button>
     </>
   );
