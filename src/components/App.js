@@ -23,7 +23,7 @@ const App = ({ slides }) => {
   return (
     <>
       <h1 data-testid="title">{slides[index].title}</h1>
-      <p data-testid="text">{slides[index].title}</p>
+      <p data-testid="text">{slides[index].text}</p>
       <button
         onClick={restart}
         data-testid="button-restart"
